@@ -1,15 +1,10 @@
 <?
-
 	$SkriptStart = microtime(true);
 
 	$Api = IPS_GetProperty(IPS_GetParent($_IPS["SELF"]), "API");
 	$Location = IPS_GetProperty(IPS_GetParent($_IPS["SELF"]), "Location");
-//	$api = $this->ReadPropertyString("API");
-//	$location = $this->ReadPropertyString("Location");
-
-   echo "API:" . $Api . "<br>";
-
 	$Url = "http://api.wunderground.com/api/".$Api."/geolookup/conditions/lang:DL/q/DL/".$Location.".json";
+
 	$json_string = file_get_contents($Url);
 	$parsed_json = json_decode($json_string);
 	
