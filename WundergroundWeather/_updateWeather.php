@@ -56,5 +56,5 @@
 	  SetValueFloat(IPS_GetObjectIDByIdent('UV',IPS_GetParent($_IPS["SELF"])),floatval($value));
 
 	$SkriptLaufzeit = microtime(true) - $SkriptStart;
-	IPS_LogMessage($_IPS['SELF'], "Laufzeit beträgt ". $SkriptLaufzeit. "sek");
+	IPS_LogMessage($_IPS['SELF'], "Laufzeit betrÃ¤gt ". $SkriptLaufzeit. "sek");
 ?>
