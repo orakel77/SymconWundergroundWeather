@@ -1,8 +1,9 @@
 {
   "id": "{4c2425f7-c0f0-42cf-b43b-df9731f4649e}",
-  "name": "SymconWunderground",
+  "name": "Wunderground",
   "type": 0,
   "vendor": "Tobias Berndes",
+  "aliases": ["Wunderground"],
   "parentRequirements": [],
   "childRequirements": [],
   "implemented": [],
