@@ -7,11 +7,8 @@
 
 	$json_string = file_get_contents($Url);
 	$parsed_json = json_decode($json_string);
-	
-	echo "ID Temperatur:" . IPS_GetVariableIDByName('Temperatur',IPS_GetParent($_IPS["SELF"]));
-	echo "ID Temperatur:" . IPS_GetObjectIDByIdent('Condition',IPS_GetParent($_IPS["SELF"]));
-	
 
+	//Speicher JSON in Variablen
 	$value = $parsed_json->{'current_observation'}->{'weather'};
 		SetValueString(IPS_GetObjectIDByIdent('Condition',IPS_GetParent($_IPS["SELF"])),$value);
 
