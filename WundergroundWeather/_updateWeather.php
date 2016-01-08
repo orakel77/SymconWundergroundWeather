@@ -29,7 +29,7 @@
 	  SetValueInteger(IPS_GetObjectIDByIdent('Humidity',IPS_GetParent($_IPS["SELF"])),intval($value));
 
 	$value = $parsed_json->{'current_observation'}->{'wind_degrees'};
-		SetValueInteger(IPS_GetVariableIDByName('WindDirection',IPS_GetParent($_IPS["SELF"])),intval($value));
+		SetValueInteger(IPS_GetObjectIDByIdent('WindDirection',IPS_GetParent($_IPS["SELF"])),intval($value));
 
 		
 	$value = $parsed_json->{'current_observation'}->{'temp_c'};
