@@ -1,0 +1,18 @@
+{
+    "elements":
+    [
+        { "type": "ValidationTextBox", "name": "API", "caption": "API Key" },
+		{ "type": "ValidationTextBox", "name": "Location", "caption": "Ort" },
+		{ "type": "IntervalBox", "name": "UpdateInterval", "caption": "Minuten" }
+    ],
+    "actions":
+    [
+        { "type": "Button", "label": "Test", "onClick": "test($Temperature);" },
+		{ "type": "ValidationTextBox", "name": "Temperature", "caption": "Temperatur" }
+    ],
+    "status":
+    [
+		{ "code": 110, "icon": "active", "caption": "Update ok" },
+        { "code": 210, "icon": "error", "caption": "Update failed" }
+    ]
+}

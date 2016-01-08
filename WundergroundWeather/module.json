@@ -1,0 +1,10 @@
+{
+  "id": "{4c2425f7-c0f0-42cf-b43b-df9731f4649e}",
+  "name": "SymconWunderground",
+  "type": 0,
+  "vendor": "Tobias Berndes",
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "TB"
+}
