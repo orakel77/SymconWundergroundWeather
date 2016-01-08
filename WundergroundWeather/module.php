@@ -17,7 +17,7 @@
             parent::Create();
 			$this->RegisterPropertyString("API", "");
 			$this->RegisterPropertyString("Location", "Menden");
-			$this->RegisterPropertyInteger("UpdateInterval", 5);
+			$this->RegisterPropertyInteger("UpdateInterval", 300);
 			
 			//Eigenschaften festlegen
 			$this->RegisterVariableString("Condition","Wetterbedingung");

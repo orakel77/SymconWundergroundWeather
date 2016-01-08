@@ -3,7 +3,7 @@
     [
         { "type": "ValidationTextBox", "name": "API", "caption": "API Key" },
 		{ "type": "ValidationTextBox", "name": "Location", "caption": "Ort" },
-		{ "type": "IntervalBox", "name": "UpdateInterval", "caption": "Minuten" }
+		{ "type": "IntervalBox", "name": "UpdateInterval", "caption": "Sekunden" }
     ],
     "actions":
     [ ],
