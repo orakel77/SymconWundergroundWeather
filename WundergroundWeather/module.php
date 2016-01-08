@@ -21,7 +21,19 @@
 			
 			//Eigenschaften festlegen
 			$this->RegisterVariableString("Condition","Wetterbedingung");
+			$this->RegisterVariableString("WindDirectionString","Windrichtung");
+			
+			$this->RegisterVariableInteger("AirPressure","Luftdruck","AirPressure");
+			$this->RegisterVariableInteger("Visibility","Sichtweite","Distance.km");
+			$this->RegisterVariableInteger("Humidity","Luftfeuchtigkeit","Humidity");
+			$this->RegisterVariableInteger("WindDirection","Windrichtung","WindDirection");			
+			
 			$this->RegisterVariableFloat("Temperature","Temperatur","Temperature");
+			$this->RegisterVariableFloat("Windchill","Windchill","Temperature");
+			$this->RegisterVariableFloat("Dewpoint","Taupunkt","Temperature");
+			$this->RegisterVariableFloat("WindSpeed","Wind","WindSpeed.Kph");
+			$this->RegisterVariableFloat("WindSpeedGust","Wind in Böen","WindSpeed.Kph");
+			$this->RegisterVariableFloat("UV","UV Index","Temperature");
         }
  
         // Überschreibt die intere IPS_ApplyChanges($id) Funktion
