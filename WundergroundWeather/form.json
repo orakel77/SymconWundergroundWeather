@@ -7,7 +7,7 @@
     ],
     "actions":
     [
-        { "type": "Button", "label": "Daten abfragen", "onClick": "RequestData();" },
+        { "type": "Button", "label": "Daten abfragen", "onClick": "TB_RequestData();" },
 		{ "type": "ValidationTextBox", "name": "Temperature", "caption": "Temperatur" }
     ],
     "status":
