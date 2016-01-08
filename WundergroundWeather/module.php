@@ -22,7 +22,8 @@
 			//Eigenschaften festlegen
 			$this->RegisterVariableString("Condition","Wetterbedingung");
 			$this->RegisterVariableFloat("Temperature","Temperatur","Temperature");
- 
+			
+			IPS_LogMessage($_IPS['SELF'], "Test");
         }
  
         // Überschreibt die intere IPS_ApplyChanges($id) Funktion
@@ -31,9 +32,18 @@
             parent::ApplyChanges();
         }
 
+		public function RequestData($id)
+		{
+			IPS_LogMessage($_IPS['SELF'], "Call RequestData(". $id . ")");
+			RequestData();
+			
+		}
+		
 		// Daten von Wunderground Abfragen
 		public function RequestData()
 		{
+			$SkriptStart = microtime(true);
+			
 			$api = $this->ReadPropertyString("API");
 			$location = $this->ReadPropertyString("Location");
 			
@@ -77,6 +87,9 @@
 			  SetValueFloat(IPS_GetVariableIDByName('UV',IPS_GetParent($_IPS["SELF"])),floatval($value));
 
 			*/
+			
+			$SkriptLaufzeit = microtime(true) - $SkriptStart;
+			IPS_LogMessage($_IPS['SELF'], "Laufzeit beträgt ". $SkriptLaufzeit. "sek");
 		}
 		
     }
