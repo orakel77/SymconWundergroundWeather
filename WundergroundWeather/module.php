@@ -41,19 +41,22 @@
             // Diese Zeile nicht löschen
             parent::ApplyChanges();
 			
-			If($this->ReadPropertyString("API") != "")
+			if (strlen($this->ReadPropertyString("API")) != 16)
 			{
 				//Instanz ist aktiv
-				$this->SetStatus(102)
+				$this->SetStatus(102);
 				
 				//Script + Timer
 				$UpdateInterval = $this->ReadPropertyInteger("UpdateInterval");
 				IPS_LogMessage($_IPS['SELF'], "Update Interval ". $UpdateInterval. " Minuten");
 				
 				$UpdateWeatherScriptID = @$this->GetIDForIdent("_updateWeather");
-				if ( $UpdateWeatherScriptID === false ){
+				if ( $UpdateWeatherScriptID === false )
+				{
 				  $UpdateWeatherScriptID = $this->RegisterScript("_updateWeather", "_updateWeather", file_get_contents(__DIR__ . "/_updateWeather.php"), 99);
-				}else{
+				}
+				else
+				{
 				  IPS_SetScriptContent($UpdateWeatherScriptID, file_get_contents(__DIR__ . "/_updateWeather.php"));
 				}
 				IPS_SetHidden($UpdateWeatherScriptID,true);
@@ -62,7 +65,7 @@
 			else
 			{
 				//Instanz ist inaktiv
-				$this->SetStatus(104)
+				$this->SetStatus(104);
 			}
         }		
     }
