@@ -41,7 +41,7 @@
             // Diese Zeile nicht löschen
             parent::ApplyChanges();
 			
-			if (strlen($this->ReadPropertyString("API")) = 16)
+			if (strlen($this->ReadPropertyString("API")) == 16)
 			{
 				//Instanz ist aktiv
 				$this->SetStatus(102);
