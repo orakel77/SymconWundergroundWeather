@@ -41,19 +41,29 @@
             // Diese Zeile nicht löschen
             parent::ApplyChanges();
 			
-			//ScriptTimer
-			$UpdateInterval = $this->ReadPropertyString("UpdateInterval");
-			IPS_LogMessage($_IPS['SELF'], "Update Interval ". $UpdateInterval. " Minuten");
-			
-			$UpdateWeatherScriptID = @$this->GetIDForIdent("_updateWeather");
-			if ( $UpdateWeatherScriptID === false ){
-			  $UpdateWeatherScriptID = $this->RegisterScript("_updateWeather", "_updateWeather", file_get_contents(__DIR__ . "/_updateWeather.php"), 99);
-			}else{
-			  IPS_SetScriptContent($UpdateWeatherScriptID, file_get_contents(__DIR__ . "/_updateWeather.php"));
+			If($this->ReadPropertyString("API") != "")
+			{
+				//Instanz ist aktiv
+				$this->SetStatus(102)
+				
+				//Script + Timer
+				$UpdateInterval = $this->ReadPropertyString("UpdateInterval");
+				IPS_LogMessage($_IPS['SELF'], "Update Interval ". $UpdateInterval. " Minuten");
+				
+				$UpdateWeatherScriptID = @$this->GetIDForIdent("_updateWeather");
+				if ( $UpdateWeatherScriptID === false ){
+				  $UpdateWeatherScriptID = $this->RegisterScript("_updateWeather", "_updateWeather", file_get_contents(__DIR__ . "/_updateWeather.php"), 99);
+				}else{
+				  IPS_SetScriptContent($UpdateWeatherScriptID, file_get_contents(__DIR__ . "/_updateWeather.php"));
+				}
+				IPS_SetHidden($UpdateWeatherScriptID,true);
+				IPS_SetScriptTimer($UpdateWeatherScriptID, $UpdateInterval);
 			}
-
-			IPS_SetHidden($UpdateWeatherScriptID,true);
-			IPS_SetScriptTimer($UpdateWeatherScriptID, $UpdateInterval); 
+			else
+			{
+				//Instanz ist inaktiv
+				$this->SetStatus(104)
+			}
         }		
     }
 ?>
