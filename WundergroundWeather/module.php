@@ -21,7 +21,8 @@
 			$this->RegisterPropertyInteger("UpdateInterval", 300);
 			
 			//Eigenschaften festlegen
-			//$this->RegisterProfileFloat("WindSpeed.Kph", "WindSpeed", "", " kn",   0, 200, 1);
+			//$this->RegisterProfileFloat("WindSpeed.Kph", "WindSpeed", "", " kn",   0, 100, 1);
+			$this->RegisterProfileInteger("Distance.km", "Distance", "", " km",   0, 150, 1);
 			
 			$this->RegisterVariableString("Condition","Wetterbedingung");
 			$this->RegisterVariableString("WindDirectionString","Windrichtung");
