@@ -15,11 +15,14 @@
         public function Create() {
             // Diese Zeile nicht löschen.
             parent::Create();
+			
 			$this->RegisterPropertyString("API", "");
 			$this->RegisterPropertyString("Location", "Menden");
 			$this->RegisterPropertyInteger("UpdateInterval", 300);
 			
 			//Eigenschaften festlegen
+			$this->RegisterProfileFloat("WindSpeed.Kph", "WindSpeed", "", " kn",   0, 200, 1);
+			
 			$this->RegisterVariableString("Condition","Wetterbedingung");
 			$this->RegisterVariableString("WindDirectionString","Windrichtung");
 			
@@ -30,7 +33,7 @@
 			
 			$this->RegisterVariableFloat("Temperature","Temperatur","Temperature");
 			$this->RegisterVariableFloat("Windchill","Windchill","Temperature");
-			$this->RegisterVariableFloat("Dewpoint","Taupunkt","Temperature");
+			$this->RegisterVariableFloat("Dewpoint","Taupunkt","Temperature");			
 			$this->RegisterVariableFloat("WindSpeed","Wind","WindSpeed.Kph");
 			$this->RegisterVariableFloat("WindSpeedGust","Wind in Böen","WindSpeed.Kph");
 			$this->RegisterVariableFloat("UV","UV Index","Temperature");
