@@ -36,7 +36,7 @@
 			$this->RegisterVariableFloat("Dewpoint","Taupunkt","Temperature");			
 			$this->RegisterVariableFloat("WindSpeed","Wind","WindSpeed.Kph");
 			$this->RegisterVariableFloat("WindSpeedGust","Wind in Böen","WindSpeed.Kph");
-			$this->RegisterVariableFloat("UV","UV Index","Temperature");
+			$this->RegisterVariableFloat("UV","UV Index");
         }
  
         // Überschreibt die intere IPS_ApplyChanges($id) Funktion
