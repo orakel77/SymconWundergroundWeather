@@ -47,7 +47,7 @@
 				$this->SetStatus(102)
 				
 				//Script + Timer
-				$UpdateInterval = $this->ReadPropertyString("UpdateInterval");
+				$UpdateInterval = $this->ReadPropertyInteger("UpdateInterval");
 				IPS_LogMessage($_IPS['SELF'], "Update Interval ". $UpdateInterval. " Minuten");
 				
 				$UpdateWeatherScriptID = @$this->GetIDForIdent("_updateWeather");
