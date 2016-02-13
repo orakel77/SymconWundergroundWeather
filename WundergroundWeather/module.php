@@ -24,13 +24,13 @@
 			//$this->RegisterProfileFloat("WindSpeed.Kph", "WindSpeed", "", " kn",   0, 100, 1);
 			//$this->RegisterProfileInteger("Distance.km", "Distance", "", " km",   0, 150, 1);
 			
-			if (!IPS_VariableProfileExists("WindSpeed.kt"))
-			{
-				IPS_CreateVariableProfile("WindSpeed.kt", 2);	// 2 = Float
-				IPS_SetVariableProfileIcon("WindSpeed.kt","WindSpeed");
-				IPS_SetVariableProfileValues("WindSpeed.kt", 0, 100, 1);
-				IPS_SetVariableProfileText("WindSpeed.kt",""," kn");
-			}
+			//if (!IPS_VariableProfileExists("WindSpeed.kt"))
+			//{
+			//	IPS_CreateVariableProfile("WindSpeed.kt", 2);	// 2 = Float
+			//	IPS_SetVariableProfileIcon("WindSpeed.kt","WindSpeed");
+			//	IPS_SetVariableProfileValues("WindSpeed.kt", 0, 100, 1);
+			//	IPS_SetVariableProfileText("WindSpeed.kt",""," kn");
+			//}
 			
 			if (!IPS_VariableProfileExists("Distance.km"))
 			{
@@ -52,8 +52,8 @@
 			$this->RegisterVariableFloat("Temperature","Temperatur","Temperature");
 			$this->RegisterVariableFloat("Windchill","Windchill","Temperature");
 			$this->RegisterVariableFloat("Dewpoint","Taupunkt","Temperature");			
-			$this->RegisterVariableFloat("WindSpeed","Wind","WindSpeed.kt");
-			$this->RegisterVariableFloat("WindSpeedGust","Wind in Böen","WindSpeed.kt");
+			$this->RegisterVariableFloat("WindSpeed","Wind","WindSpeed.kmh");
+			$this->RegisterVariableFloat("WindSpeedGust","Wind in Böen","WindSpeed.kmh");
 			$this->RegisterVariableFloat("UV","UV Index");
         }
  
