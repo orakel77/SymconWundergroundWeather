@@ -1,3 +1,3 @@
 #Doku
 
-Die Doku wird noch erstellt. Das Projekt befindet sich noch in der Entwicklung.
+Fork von https://github.com/tobiber/SymconWundergroundWeather mit Anpassungen für die in Europa gebräuchlicheren Windgeschwindigkeiten in km/h. Wunderground liefert diese auch korrekt für die Variablen "Wind" und "Wind in Böen".
